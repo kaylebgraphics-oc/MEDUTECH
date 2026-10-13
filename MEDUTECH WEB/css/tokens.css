@@ -1,0 +1,24 @@
+/* ───────────────────────────────────────────────
+   MEDUTECH colour tokens
+   Every value below is sampled directly from the logo.
+   Use these variables across the whole website.
+   ─────────────────────────────────────────────── */
+:root {
+  --mt-bg:          #021619;  /* logo background            */
+  --mt-bg-deep:     #010f12;  /* darker edge / vignette     */
+  --mt-ring:        #14facb;  /* glowing outline of the tile */
+  --mt-mint-light:  #64fbbf;  /* lightest highlight of the M */
+  --mt-mint:        #30f9b6;
+  --mt-green:       #0ef0a8;
+  --mt-green-deep:  #02d198;
+  --mt-teal:        #02a284;
+  --mt-teal-deep:   #026d5e;  /* darkest fold of the letters */
+
+  --mt-text:        #64fbbf;
+  --mt-text-soft:   rgba(100, 251, 191, .68);
+
+  --mt-font: "Sora", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mt-spring:   cubic-bezier(.34, 1.56, .64, 1);
+  --mt-ease-out: cubic-bezier(.16, 1, .3, 1);
+  --mt-ease-io:  cubic-bezier(.65, 0, .35, 1);
+}

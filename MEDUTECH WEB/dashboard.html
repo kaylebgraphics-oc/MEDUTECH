@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f4ee">
+<title>MEDUTECH — Dashboard</title><link rel="icon" href="assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/pro.css"><link rel="stylesheet" href="css/hub.css"><script src="js/prefs.js"></script></head><body data-page="dashboard">
+<main class="wrap page"><section class="top"><h1><span id="gr"></span> <em id="dn"></em></h1><p>Here is your health at a glance.</p></section>
+<div class="dg" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))"><div class="glass card rv"><h3 data-t="d_next"></h3><div id="na"></div></div>
+<div class="glass card rv" style="text-align:center"><h3 data-t="d_hab"></h3><div class="ring sm"><svg viewBox="0 0 120 120"><circle class="tr" cx="60" cy="60" r="50"/><circle class="pr" id="pr" cx="60" cy="60" r="50"/></svg><div id="pc"></div></div><p class="hint" id="sm" style="margin:.2rem 0 .8rem"></p><a class="btn ghost" href="priorities.html" data-t="n_hab"></a></div>
+<div class="glass card rv"><h3>Last symptom check</h3><div id="ls"></div></div>
+<div class="glass card rv"><h3 data-t="d_tip"></h3><p class="big" id="tp"></p></div></div>
+<div class="sec-h" style="margin:2rem 0 1rem"><h2 data-t="d_qa" style="font-size:1.6rem"></h2></div>
+<div class="acts qa"><a class="btn" href="symptoms.html" data-t="b_check"></a><a class="btn ghost" href="care.html" data-t="b_care"></a><a class="btn ghost" href="tests.html" data-t="t4"></a><a class="btn ghost" href="chat.html" data-t="t6"></a></div></main>
+<script src="js/i18n.js"></script><script src="js/shell.js"></script><script src="js/dash.js"></script><script src="js/translate.js"></script></body></html>

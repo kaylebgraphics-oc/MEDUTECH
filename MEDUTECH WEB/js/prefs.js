@@ -1,0 +1,2 @@
+(()=>{const d=document.documentElement,g=k=>{try{return localStorage.getItem(k)}catch(e){return null}};d.dataset.theme=g('mt-theme')==='dark'?'dark':'light';if(g('mt-text')==='large')d.dataset.text='large'})();
+document.addEventListener('DOMContentLoaded',()=>document.querySelectorAll('img[data-photo]').forEach(i=>{const n=i.dataset.photo,E=['jpg','jpeg','png','webp','JPG','JPEG','PNG','WEBP'];let k=0;const t=()=>{if(k>=E.length){i.remove();return}i.src='assets/photos/'+n+'.'+E[k++]};i.onload=()=>i.parentElement&&i.parentElement.classList.add('has-photo');i.onerror=t;t()}));

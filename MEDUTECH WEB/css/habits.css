@@ -1,0 +1,41 @@
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem;align-items:start}
+.hcard{padding:1.4rem}
+.hcard h3{font-size:1.25rem;margin-bottom:.3rem}
+.today-top{display:flex;align-items:center;justify-content:space-around;gap:1rem;flex-wrap:wrap}
+.today-top .ring{margin:.4rem 0}.today-top .ring svg{width:150px}
+.streak{display:grid;justify-items:center;gap:.1rem;color:var(--green)}
+.streak svg{width:30px;height:30px;fill:var(--green)}.streak b{font:600 2.2rem/1 var(--f1)}.streak span{font-size:.8rem;color:var(--soft)}
+.hmsg{text-align:center;color:var(--ink);font-weight:500;margin:.4rem 0 1rem;min-height:1.6em}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem}
+.wd{display:grid;gap:.3rem;justify-items:center;font-size:.72rem;color:var(--soft)}
+.wd .cell{position:relative;width:100%;max-width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:var(--tint);overflow:hidden}
+.wd .cell i{position:absolute;left:0;right:0;bottom:0;background:var(--green);opacity:.85;transition:height .5s}
+.wd.today .cell{border:2px solid var(--green)}.wd.today{color:var(--green);font-weight:700}
+.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem;justify-content:center}
+.bdg{padding:.3rem .8rem;border:1px dashed var(--line);border-radius:99px;font-size:.78rem;color:var(--soft)}
+.bdg.got{border-style:solid;border-color:var(--green);background:var(--tint);color:var(--green);font-weight:700}
+.hab{align-items:flex-start}.hab span{display:block}.hab span small{display:block;margin:.15rem 0 0;white-space:normal;color:var(--soft);font-size:.78rem;font-weight:400}
+.hab i{margin-top:2px}.hab.pick{border-color:var(--green);box-shadow:inset 3px 0 0 var(--green)}
+.hab .lk{margin-left:auto;font-size:.7rem;font-weight:700;color:var(--green);white-space:nowrap}
+.coach{padding:.9rem 1rem;margin:.8rem 0 1rem;border-left:3px solid var(--green);background:var(--tint);border-radius:0 8px 8px 0;min-height:3.2em}
+.bwrap{display:grid;place-items:center;height:190px}
+.bcircle{width:110px;height:110px;border-radius:50%;background:var(--tint);border:2px solid var(--green);display:grid;place-items:center;transform:scale(.75);transition:transform 4s ease-in-out}
+.bcircle span{font:600 1rem var(--f1);color:var(--green)}
+.bcircle.in{transform:scale(1.35);transition-duration:4s}.bcircle.out{transform:scale(.75);transition-duration:6s}
+.brow{display:flex;justify-content:space-between;align-items:center}.brow span{font:600 1.5rem var(--f1)}
+.seg5{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem}.seg5.e3{grid-template-columns:repeat(3,1fr)}
+.seg5 button{padding:.55rem .2rem;border:1px solid var(--line);border-radius:8px;background:var(--card);font-size:.8rem;font-weight:600;color:var(--soft)}
+.seg5 button.on{background:var(--green);border-color:var(--green);color:var(--on)}
+.chartbox{margin-top:1.2rem}.chartbox svg{width:100%;height:auto}
+.lg{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 .3rem 0 .6rem;vertical-align:baseline}.lg.a{background:var(--green);opacity:.6;margin-left:0}.lg.b{background:var(--ink)}
+.mform{display:grid;grid-template-columns:1fr auto auto;gap:.5rem;margin:.8rem 0}.mform input{margin:0}
+.med{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;margin-bottom:.5rem;border:1px solid var(--line);border-radius:10px}
+.med.on{background:var(--tint);border-color:var(--green)}.med b{display:block}.med small{color:var(--soft)}
+.med .sp{flex:1}.med button{padding:.35rem .7rem;border-radius:8px;border:1px solid var(--line);background:var(--card);font-size:.8rem;font-weight:600;color:var(--green)}
+.med button.x{color:var(--soft)}
+.mact{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0 .2rem}
+.localnote{text-align:center;margin:1.5rem 0 0}
+.toast{position:fixed;left:50%;bottom:5.5rem;transform:translateX(-50%);max-width:92%;padding:.8rem 1.2rem;border-radius:10px;background:var(--deep);color:#fff;font-weight:600;z-index:60;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.cf{position:fixed;top:-12px;width:8px;height:12px;z-index:70;pointer-events:none;animation:cfall 1.9s ease-in forwards}
+@keyframes cfall{to{transform:translate(var(--dx),105vh) rotate(var(--r));opacity:.9}}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr}.mform{grid-template-columns:1fr 1fr}.mform button{grid-column:1/-1}}

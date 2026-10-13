@@ -1,0 +1,25 @@
+.auth{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.pane{background:var(--deep);color:#eef2ea;padding:clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;position:relative;overflow:hidden}
+.pane .brand{color:#fff}.pane h1{font-size:clamp(2.2rem,4.4vw,3.7rem);color:#fff}.pane h1 em{color:#bfe3cf}.pane p{margin-top:1.2rem;color:#cfdcd2;max-width:46ch}
+.pane ul{list-style:none;display:grid;gap:.7rem;position:relative;z-index:1}.pane li{display:flex;gap:1rem;color:#e3ece5}.pane li b{font:500 1rem var(--f1);color:#bfe3cf}
+.formside{display:grid;place-items:center;padding:2rem}.box{width:min(420px,100%);animation:up .6s both}@keyframes up{from{opacity:0;transform:translateY(16px)}}
+.seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;background:var(--tint);border-radius:10px;margin-bottom:2rem}.seg button{padding:.6rem;border:0;border-radius:7px;background:transparent;font-weight:600;color:var(--soft);transition:.25s}.seg button.on{background:var(--card);color:var(--green);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.box h2{font-size:2rem}.sub{color:var(--soft);margin:.4rem 0 .6rem}.pw{position:relative}.pw input{padding-right:4.5rem}.pw button{position:absolute;right:.6rem;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--green);font-weight:700;font-size:.82rem}
+.btn.full{width:100%;margin-top:1.3rem}.err{margin-top:.9rem;padding:.7rem .9rem;border-radius:8px;background:var(--warnbg);color:var(--warn);font-size:.88rem}
+.or{display:flex;align-items:center;gap:1rem;color:var(--soft);font-size:.82rem;margin:1.4rem 0 0}.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}.or span{order:1}.or::after{order:2}.or span{margin:0}
+.box .note{margin-top:1.6rem;text-align:center}
+@media(max-width:860px){.auth{grid-template-columns:1fr}.pane{min-height:auto}.pane ul{display:none}}
+.lang{display:flex;justify-content:flex-end;margin-bottom:1rem}.lang select{width:auto;padding:.4rem .6rem;font-size:.82rem;font-weight:600}.gbtn{display:flex;justify-content:center;margin:.4rem 0}
+
+.or{margin:1rem 0 0}
+#gh{color:var(--warn);text-align:left;margin:.6rem 0 0;font-size:.82rem;line-height:1.5}
+
+/* login photo panel: photo, then a soft green scrim, then the text */
+.pane{justify-content:flex-start;gap:2rem}
+.pane>div{margin-top:auto}
+.pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;z-index:0;filter:saturate(.88) contrast(1.02)}
+.pane::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,58,43,.18) 0%,rgba(15,58,43,.25) 30%,rgba(15,58,43,.86) 68%,rgba(15,58,43,.96) 100%)}
+.pane>*:not(.pimg){position:relative;z-index:2}
+.pane h1{text-shadow:0 1px 14px rgba(0,0,0,.25)}
+.pane ul{margin-top:.2rem}
+@media(max-width:860px){.pane{min-height:340px}.pane>div{margin-top:3rem}}

@@ -1,0 +1,22 @@
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:clamp(3rem,7vw,5.5rem) 0 3rem}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem)}.hero p{color:var(--soft);font-size:1.12rem;max-width:50ch;margin:1.3rem 0 1.8rem}.hero .btn{margin:0 .5rem .5rem 0}
+.aside{padding:1.6rem}.aside h3{font-size:1.2rem;margin-bottom:.8rem}.aside a{display:flex;justify-content:space-between;padding:.8rem 0;border-top:1px solid var(--line);font-weight:500;transition:.2s}.aside a:hover{color:var(--green);padding-left:.4rem}.aside a::after{content:"\2192"}
+.sec-h{margin:1rem 0 1.6rem}.sec-h h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.tiles,.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;padding-bottom:3rem;counter-reset:t}
+.tile,.fc{display:flex;flex-direction:column;padding:1.7rem;transition:transform .3s,border-color .3s,box-shadow .3s}.tile:hover,.fc:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:0 14px 30px rgba(23,80,61,.08)}
+.ic::before{counter-increment:t;content:"0" counter(t);font:500 .95rem var(--f1);color:var(--green);display:block;padding-bottom:.8rem;margin-bottom:1rem;border-bottom:1px solid var(--line)}
+.tile h3,.fc h3{font-size:1.4rem;margin-bottom:.5rem}.tile p,.fc p{color:var(--soft);font-size:.95rem;flex:1}.go,.fc em{margin-top:1.1rem;color:var(--green);font-weight:700;font-size:.9rem;font-style:normal}.go::after,.fc em::after{content:" \2192";display:inline-block;transition:.25s}.tile:hover .go::after,.fc:hover em::after{transform:translateX(5px)}
+.legal{display:flex;gap:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:1.5rem 1.8rem}.legal p{color:var(--soft);flex:1;min-width:240px}
+.steps{display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;padding:1rem 0 4rem;align-items:center}
+.tabs{display:grid;gap:.7rem}.tab{text-align:left;padding:1.1rem 1.3rem;border:1px solid var(--line);border-radius:10px;background:transparent;position:relative;overflow:hidden;transition:.3s}.tab b{font:600 1.1rem var(--f1);display:block}.tab span{color:var(--soft);font-size:.9rem}
+.tab.on{background:var(--card);border-color:var(--green)}.tab.on::after{content:"";position:absolute;left:0;bottom:0;height:3px;background:var(--green);animation:fill 5s linear forwards}@keyframes fill{from{width:0}to{width:100%}}
+.stage{min-height:320px;position:relative;overflow:hidden}.scene{position:absolute;inset:0;padding:2rem;display:grid;align-content:center;gap:.7rem;opacity:0;transform:translateY(12px);transition:.5s;pointer-events:none}.scene.on{opacity:1;transform:none;pointer-events:auto}
+.scene h3{font-size:1.5rem}.chip{padding:.75rem 1rem;border-radius:8px;background:var(--tint);animation:pop .5s both}.scene .chip:nth-of-type(2){animation-delay:.12s}.scene .chip:nth-of-type(3){animation-delay:.24s}@keyframes pop{from{opacity:0;transform:translateX(-10px)}}
+.stats{display:flex;justify-content:space-around;flex-wrap:wrap;gap:1.5rem;padding:2rem;margin-bottom:3rem;text-align:center}.stats b{display:block;font:600 2.6rem var(--f1);color:var(--green)}.stats span{color:var(--soft);font-size:.9rem}
+@media(max-width:860px){.hero,.steps{grid-template-columns:1fr}}
+.heroart{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(23,80,61,.12);animation:fl 7s ease-in-out infinite}.heroart img{display:block;width:100%}.heroart .ph2{position:absolute;inset:0;height:100%;object-fit:cover}@keyframes fl{50%{transform:translateY(-6px)}}
+.hv{background:var(--deep);padding:1.4rem;border-radius:26px;box-shadow:0 30px 60px rgba(23,80,61,.22)}.hv .ill{border-radius:16px}.hv .ph2{inset:1.4rem;width:calc(100% - 2.8rem);height:calc(100% - 2.8rem);border-radius:16px}
+.fl{position:absolute;display:flex;gap:.7rem;align-items:center;padding:.7rem .95rem;background:var(--card);color:var(--ink);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.2);animation:fl 5s ease-in-out infinite}.fl b{display:block;font-size:.86rem}.fl small{color:var(--soft);font-size:.74rem}
+.fl i{width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--on);display:grid;place-items:center;font-style:normal;font-size:.85rem}.fl i.pn{background:var(--tint);position:relative}.fl i.pn::after{content:"";width:11px;height:11px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--green)}.fl1{left:-4%;top:10%}.fl2{right:-3%;bottom:10%;animation-delay:-2.5s}
+@media(max-width:860px){.fl1{left:2%}.fl2{right:2%}}
+.heroart.hv{overflow:visible}
